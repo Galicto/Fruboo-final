@@ -30,3 +30,16 @@ body {
 html {
   scrollbar-width: none;
 }
+
+/* Forcefully remove Next.js and Vercel dev indicators that bypass config */
+#__vercel-toolbar, 
+vercel-toolbar,
+.vercel-toolbar,
+#__next-build-watcher, 
+nextjs-portal, 
+[data-vercel-toolbar] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

@@ -24,6 +24,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+
   return (
     <main className="bg-[#050505] min-h-screen text-white selection:bg-[var(--color-accent-orange)] selection:text-white">
       <Navbar />
