@@ -116,12 +116,12 @@ export default function FoundersPage() {
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[var(--color-accent-green)]/5 blur-[160px] rounded-full pointer-events-none -z-10" />
 
       {/* ─── HEADER ──────────────────────────────── */}
-      <section className="relative px-6 pt-40 pb-20 max-w-5xl mx-auto text-center">
+      <section className="relative px-5 pt-24 md:pt-40 pb-10 md:pb-20 max-w-5xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[11px] tracking-[0.5em] text-[var(--color-accent-green)] uppercase font-bold mb-5"
+          className="text-[11px] tracking-[0.5em] text-[var(--color-accent-green)] uppercase font-bold mb-4 md:mb-5"
         >
           The Team
         </motion.p>
@@ -129,7 +129,7 @@ export default function FoundersPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tighter text-white leading-[0.95] drop-shadow-2xl"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tighter text-white leading-[0.95] drop-shadow-2xl"
         >
           The People<br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white/70 to-white/30">
@@ -140,7 +140,7 @@ export default function FoundersPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 text-lg md:text-xl text-white/40 font-light tracking-wide max-w-xl mx-auto leading-relaxed"
+          className="mt-5 md:mt-7 text-base md:text-xl text-white/40 font-light tracking-wide max-w-xl mx-auto leading-relaxed"
         >
           A bold vision. A relentless team. Built to redefine freshness.
         </motion.p>
@@ -149,7 +149,7 @@ export default function FoundersPage() {
       {/* ─── ALL MEMBERS — single 3-col grid ────── */}
       {/* Row 1: spacer | Raj (centered, same size) | spacer */}
       {/* Row 2: Harshit | Anirudh | Aamina */}
-      <section className="relative px-6 max-w-5xl mx-auto">
+      <section className="relative px-5 max-w-5xl mx-auto">
 
         {/* Subtle green glow only under founder card */}
         <div
@@ -166,7 +166,7 @@ export default function FoundersPage() {
         />
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -184,7 +184,7 @@ export default function FoundersPage() {
       </section>
 
       {/* ─── VISION SECTION ──────────────────────── */}
-      <section className="relative w-full max-w-5xl mx-auto px-6 pt-40 pb-24 flex flex-col space-y-28 text-center">
+      <section className="relative w-full max-w-5xl mx-auto px-5 pt-20 md:pt-40 pb-16 md:pb-24 flex flex-col space-y-16 md:space-y-28 text-center">
         {/* Glow */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[var(--color-accent-green)]/8 rounded-full blur-[120px] -z-10 mix-blend-screen pointer-events-none" />
 
@@ -194,13 +194,13 @@ export default function FoundersPage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-[11px] tracking-[0.5em] text-[var(--color-accent-green)] uppercase font-bold mb-6">Vision</p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
+          <p className="text-[11px] tracking-[0.5em] text-[var(--color-accent-green)] uppercase font-bold mb-4 md:mb-6">Vision</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
             To redefine how the world<br className="hidden md:block" />
             {" "}experiences{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">freshness.</span>
           </h2>
-          <p className="mt-8 text-xl text-white/40 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 md:mt-8 text-base md:text-xl text-white/40 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
             Where healthy choices are effortless, visually delightful, and deeply satisfying — every sip feels real, clean, and alive.
           </p>
         </motion.div>
@@ -211,12 +211,12 @@ export default function FoundersPage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-[11px] tracking-[0.5em] text-white/30 uppercase font-bold mb-6">Our Mission</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
+          <p className="text-[11px] tracking-[0.5em] text-white/30 uppercase font-bold mb-4 md:mb-6">Our Mission</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
             Fresh. Customizable. Hygienic.<br/>
             <span className="text-white/40">Accessible to everyone.</span>
           </h2>
-          <p className="mt-8 text-xl text-white/40 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 md:mt-8 text-base md:text-xl text-white/40 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
             From college campuses to city streets — real ingredients, crafted with care, designed for modern lifestyles.
           </p>
         </motion.div>
@@ -232,14 +232,14 @@ export default function FoundersPage() {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-[400px] h-[200px] bg-[var(--color-accent-green)]/12 blur-[80px] rounded-full" />
           </div>
-          <h3 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[1.0] relative z-10">
+          <h3 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[1.0] relative z-10">
             Not just a drink.<br/>
             <span className="text-[var(--color-accent-green)]">A fresh experience.</span>
           </h3>
-          <div className="mt-12 relative z-10">
+          <div className="mt-8 md:mt-12 relative z-10">
             <a
               href="mailto:frubo.work@gmail.com"
-              className="inline-block px-10 py-5 bg-white text-black text-sm font-black tracking-[0.2em] rounded-full uppercase hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] transition-all duration-300"
+              className="inline-block px-8 md:px-10 py-4 md:py-5 bg-white text-black text-sm font-black tracking-[0.2em] rounded-full uppercase hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] transition-all duration-300"
             >
               Contact Us
             </a>

@@ -13,16 +13,16 @@ export default function FreshnessPage() {
       <FloatingFruits />
       
       {/* Hero Section: Minimal Text, Max Impact */}
-      <section className="relative min-h-screen w-full max-w-7xl mx-auto flex flex-col items-center justify-center px-6 overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0 pointer-events-none">
+      <section className="relative min-h-screen w-full max-w-7xl mx-auto flex flex-col items-center justify-center px-5 overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0 pointer-events-none">
         {/* Subtle radial light behind text for contrast */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vh] bg-black/40 blur-[100px] -z-10 rounded-full" />
         
-        <div className="relative z-20 flex flex-col items-center text-center space-y-6 md:space-y-10">
+        <div className="relative z-20 flex flex-col items-center text-center space-y-4 md:space-y-10">
           <motion.h1 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-7xl md:text-[10rem] font-black tracking-tighter leading-[0.85] drop-shadow-2xl"
+            className="text-5xl sm:text-7xl md:text-[10rem] font-black tracking-tighter leading-[0.85] drop-shadow-2xl"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white/90 to-white/30">RAW.</span><br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white/80 to-white/20">ALIVE.</span><br/>
@@ -33,7 +33,7 @@ export default function FreshnessPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-4xl text-white font-medium tracking-[0.2em] uppercase max-w-3xl drop-shadow-lg"
+            className="text-base sm:text-xl md:text-4xl text-white font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase max-w-3xl drop-shadow-lg"
           >
             Zero shortcuts. Pure hydration.
           </motion.p>
@@ -41,19 +41,19 @@ export default function FreshnessPage() {
       </section>
 
       {/* Content Section: Punchy Callouts */}
-      <section className="relative px-6 py-24 md:py-48 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center z-10 pointer-events-none">
+      <section className="relative px-5 py-16 md:py-48 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center z-10 pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-black/40 backdrop-blur-3xl p-10 md:p-16 rounded-[3rem] border border-white/5 shadow-2xl pointer-events-auto"
+          className="bg-black/40 backdrop-blur-3xl p-7 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/5 shadow-2xl pointer-events-auto"
         >
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-10 text-white drop-shadow-md">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-6 md:mb-10 text-white drop-shadow-md">
             Cut daily.<br/><span className="text-[var(--color-accent-orange)]">Never settled.</span>
           </h2>
 
-          <div className="space-y-12">
+          <div className="space-y-7 md:space-y-12">
             {[
               { title: "Sourced Direct", style: "border-[var(--color-accent-orange)]" },
               { title: "No Artificial Colors", style: "border-white/20" },
