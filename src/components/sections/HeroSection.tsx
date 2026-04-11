@@ -3,23 +3,22 @@
 import { motion, MotionValue, useTransform } from "framer-motion";
 
 export function HeroSection({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-  const opacity = useTransform(scrollYProgress, [0, 0.15, 0.25], [1, 1, 0]);
-  const yLogo = useTransform(scrollYProgress, [0, 0.15], [0, 250]); 
-  const scaleLogo = useTransform(scrollYProgress, [0, 0.15], [1, 1.1]); 
+  const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+  const yLogo = useTransform(scrollYProgress, [0, 0.05], [0, 100]); 
+  const scaleLogo = useTransform(scrollYProgress, [0, 0.05], [1, 0.9]); 
   const yText = useTransform(scrollYProgress, [0, 0.15], [0, 80]);
 
   return (
     <>
-      {/* Background Parallax Logo behind the bottle (z-0). Color must be darker than the fruit! */}
       <motion.div 
         style={{ opacity, y: yLogo, scale: scaleLogo }} 
-        className="fixed inset-x-0 top-[15vh] flex flex-col items-center justify-start z-0 pointer-events-none px-4"
+        className="fixed inset-x-0 top-[12vh] flex flex-col items-center justify-start z-0 pointer-events-none px-4"
       >
         <motion.h1 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[17vw] md:text-[24vw] leading-[0.8] font-black tracking-tighter select-none text-[#3a3a3a] drop-shadow-2xl"
+          className="text-[17vw] md:text-[24vw] leading-[0.8] font-black tracking-tighter select-none text-[#2a2a2a]"
         >
           FRUBOO
         </motion.h1>

@@ -5,7 +5,7 @@ import { useScroll, useTransform, useMotionValueEvent, useSpring } from "framer-
 
 const FRAME_COUNT = 240;
 
-export function CanvasRenderer() {
+export function CanvasRenderer({ isVisible = true }: { isVisible?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const { scrollYProgress } = useScroll();
@@ -115,7 +115,10 @@ export function CanvasRenderer() {
   });
 
   return (
-    <div className="fixed inset-0 w-full h-full z-10 pointer-events-none mix-blend-lighten">
+    <div 
+      className="fixed inset-0 w-full h-full z-10 pointer-events-none mix-blend-lighten"
+      style={{ visibility: isVisible ? 'visible' : 'hidden' }}
+    >
       {/* 
         Restored severe contrast crush! This aggressively crushes jpg compression boxes into blackness
         so they safely vanish through the mix-blend-lighten operation, preserving the deep photo-realistic feel.
@@ -141,9 +144,12 @@ export function CanvasRenderer() {
       {!isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#050505] z-20 mix-blend-normal">
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 border-4 border-white/20 border-t-[var(--color-accent-orange)] rounded-full animate-spin mb-4" />
-            <div className="text-white/50 text-sm tracking-widest font-mono animate-pulse">
-              LOADING COMPONENT...
+            {/* Premium fruit-themed loader */}
+            <div className="relative w-20 h-20">
+              <div className="absolute inset-0 border-[3px] border-white/5 rounded-full" />
+              <div className="absolute inset-0 border-[3px] border-transparent border-t-[var(--color-accent-orange)] rounded-full animate-spin" />
+              <div className="absolute inset-0 border-[3px] border-transparent border-l-[var(--color-accent-pink)] opacity-70 rounded-full animate-spin animation-delay-2000" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} />
+              <div className="absolute inset-2 bg-gradient-to-tr from-[var(--color-accent-orange)] to-[var(--color-accent-pink)] rounded-full blur-[10px] animate-pulse opacity-50" />
             </div>
           </div>
         </div>
